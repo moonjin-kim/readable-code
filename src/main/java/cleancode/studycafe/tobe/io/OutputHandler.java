@@ -1,7 +1,8 @@
 package cleancode.studycafe.tobe.io;
 
+import cleancode.studycafe.tobe.model.Item;
+import cleancode.studycafe.tobe.model.Order;
 import cleancode.studycafe.tobe.model.StudyCafeLockerPass;
-import cleancode.studycafe.tobe.model.StudyCafePass;
 
 import java.util.List;
 
@@ -12,13 +13,11 @@ public interface OutputHandler {
 
     public void askPassTypeSelection();
 
-    public void showPassListForSelection(List<StudyCafePass> passes);
+    public void showPassListForSelection(List<Item> passes);
 
-    public void askLockerPass(StudyCafeLockerPass lockerPass);
+    public void askLockerPass(Item lockerPass);
 
-    public void showPassOrderSummary(StudyCafePass selectedPass);
-
-    public void showPassOrderSummary(StudyCafePass selectedPass, StudyCafeLockerPass lockerPass);
+    public void showPassOrderSummary(Order order);
 
     public void showSimpleMessage(String message);
 }
