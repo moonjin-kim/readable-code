@@ -5,7 +5,7 @@ import cleancode.studycafe.tobe.model.Order;
 
 import java.util.List;
 
-public class ConsoleOutputHandler implements OutputHandler{
+public class ConsoleOutputHandler {
 
     public void showWelcomeMessage() {
         System.out.println("*** 프리미엄 스터디카페 ***");
