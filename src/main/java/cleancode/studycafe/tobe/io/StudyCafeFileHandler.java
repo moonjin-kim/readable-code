@@ -1,12 +1,10 @@
 package cleancode.studycafe.tobe.io;
 
-import cleancode.studycafe.tobe.model.Item;
-import cleancode.studycafe.tobe.model.StudyCafeLockerPass;
-
-import java.util.List;
+import cleancode.studycafe.tobe.model.StudyCafeLockerPasses;
+import cleancode.studycafe.tobe.model.StudyCafePasses;
 
 public interface StudyCafeFileHandler {
-    public List<Item> readStudyCafePasses();
+    public StudyCafePasses readStudyCafePasses();
 
-    public List<Item> readLockerPasses() ;
+    public StudyCafeLockerPasses readLockerPasses() ;
 }

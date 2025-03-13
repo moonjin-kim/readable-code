@@ -1,7 +1,8 @@
 package cleancode.studycafe.tobe.io;
 
-import cleancode.studycafe.tobe.model.Item;
 import cleancode.studycafe.tobe.model.Order;
+import cleancode.studycafe.tobe.model.StudyCafeLockerPass;
+import cleancode.studycafe.tobe.model.StudyCafePass;
 
 import java.util.List;
 
@@ -22,16 +23,16 @@ public class ConsoleOutputHandler {
         System.out.println("1. 시간 이용권(자유석) | 2. 주단위 이용권(자유석) | 3. 1인 고정석");
     }
 
-    public void showPassListForSelection(List<Item> passes) {
+    public void showPassListForSelection(List<StudyCafePass> passes) {
         System.out.println();
         System.out.println("이용권 목록");
         for (int index = 0; index < passes.size(); index++) {
-            Item pass = passes.get(index);
+            StudyCafePass pass = passes.get(index);
             System.out.println(String.format("%s. ", index + 1) + pass.display());
         }
     }
 
-    public void askLockerPass(Item lockerPass) {
+    public void askLockerPass(StudyCafeLockerPass lockerPass) {
         System.out.println();
         String askMessage = String.format(
             "사물함을 이용하시겠습니까? (%s)",

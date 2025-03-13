@@ -1,6 +1,6 @@
 package cleancode.studycafe.tobe.model;
 
-public class StudyCafePass implements Item{
+public class StudyCafePass{
     private final StudyCafePassType passType;
     private final int duration;
     private final int price;
@@ -16,26 +16,21 @@ public class StudyCafePass implements Item{
     public static StudyCafePass of(StudyCafePassType passType, int duration, int price, double discountRate) {
         return new StudyCafePass(passType, duration, price, discountRate);
     }
-    @Override
     public StudyCafePassType getPassType() {
         return passType;
     }
-    @Override
     public int getDuration() {
         return duration;
     }
 
-    @Override
     public int getPrice() {
         return price;
     }
 
-    @Override
     public int getDiscount() {
         return (int) (price * discountRate);
     }
 
-    @Override
     public String display() {
         if (passType == StudyCafePassType.HOURLY) {
             return String.format("이용권: %s시간권 - %d원", duration, price);
