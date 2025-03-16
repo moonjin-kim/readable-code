@@ -1,9 +1,9 @@
 package cleancode.studycafe.tobe.io;
 
 import cleancode.studycafe.tobe.model.Order;
-import cleancode.studycafe.tobe.model.StudyCafeLockerPass;
-import cleancode.studycafe.tobe.model.StudyCafePass;
-import cleancode.studycafe.tobe.model.StudyCafePassType;
+import cleancode.studycafe.tobe.model.pass.locker.StudyCafeLockerPass;
+import cleancode.studycafe.tobe.model.pass.StudyCafeSeatPass;
+import cleancode.studycafe.tobe.model.pass.StudyCafePassType;
 
 import java.util.List;
 
@@ -15,7 +15,7 @@ public class ConsoleStudyCafeIOHandler{
         return inputHandler.getPassTypeSelectingUserAction();
     }
 
-    public StudyCafePass getSelectPass(List<StudyCafePass> passes) {
+    public StudyCafeSeatPass getSelectPass(List<StudyCafeSeatPass> passes) {
         return inputHandler.getSelectPass(passes);
     }
 
@@ -35,7 +35,7 @@ public class ConsoleStudyCafeIOHandler{
         outputHandler.askPassTypeSelection();
     }
 
-    public void showPassListForSelection(List<StudyCafePass> passes) {
+    public void showPassListForSelection(List<StudyCafeSeatPass> passes) {
         outputHandler.showPassListForSelection(passes);
     }
 
@@ -57,7 +57,7 @@ public class ConsoleStudyCafeIOHandler{
         return inputHandler.getPassTypeSelectingUserAction();
     }
 
-    public StudyCafePass askPassSelecting(List<StudyCafePass> passCandidates) {
+    public StudyCafeSeatPass askPassSelecting(List<StudyCafeSeatPass> passCandidates) {
         outputHandler.showPassListForSelection(passCandidates);
         return inputHandler.getSelectPass(passCandidates);
     }
